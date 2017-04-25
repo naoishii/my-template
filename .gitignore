@@ -1,0 +1,10 @@
+build/
+
+# Dependency directories
+node_modules/
+
+# coverage
+coverage/
+
+*.swp
+*.tmp
