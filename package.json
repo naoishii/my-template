@@ -12,9 +12,12 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
     "core-js": "2.4.1",
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
+    "flow-bin": "^0.45.0",
     "neutrino": "^5.5.1",
     "neutrino-preset-airbnb": "^2.1.0",
     "neutrino-preset-jest": "^5.6.0",

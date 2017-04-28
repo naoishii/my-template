@@ -1,3 +1,6 @@
+// @flow
+import type { CounterState, CounterAction } from '../types/counter';
+
 const INCREMENT = 'Counter/INCREMENT';
 const DECREMENT = 'Counter/DECREMENT';
 const RESET = 'Counter/RESET';
@@ -6,7 +9,7 @@ const initialState = {
   count: 0,
 };
 
-export default function reducer(state = initialState, action = {}) {
+export default function reducer(state: CounterState = initialState, action: CounterAction = {}) {
   switch (action.type) {
     case INCREMENT:
       return Object.assign({}, state, {
