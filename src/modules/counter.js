@@ -32,14 +32,14 @@ export function increment() {
   };
 }
 
-export function dencrement() {
+export function decrement() {
   return {
-    type: INCREMENT,
+    type: DECREMENT,
   };
 }
 
 export function reset() {
   return {
-    type: INCREMENT,
+    type: RESET,
   };
 }

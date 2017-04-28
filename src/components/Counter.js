@@ -17,8 +17,14 @@ export default class Counter extends Component {
     return (
       <div>
         count: { this.props.count }
-        <Button action={this.props.increment}>
-          add
+        <Button action={this.props.actions.increment}>
+          +1
+        </Button>
+        <Button action={this.props.actions.decrement}>
+          -1
+        </Button>
+        <Button action={this.props.actions.reset}>
+          0
         </Button>
       </div>
     );
@@ -27,5 +33,9 @@ export default class Counter extends Component {
 
 Counter.propTypes = {
   count: PropTypes.number.isRequired,
-  increment: PropTypes.func.isRequired,
+  actions: PropTypes.shape({
+    increment: PropTypes.func.isRequired,
+    decrement: PropTypes.func.isRequired,
+    reset: PropTypes.func.isRequired,
+  }),
 };
