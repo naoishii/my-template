@@ -1,19 +1,23 @@
 import LS from './LS';
+import fireDB from './fireDB';
 
-export function syncSetCount(count: number): void {
+const messagesRef = fireDB.ref('messages');
+
+export function syncSetCount(count: Object): void {
   LS.save('count', count);
 }
 
-export function asyncSetCount(count: number): Promise<void> {
+export function asyncSetCount(count: Object): Promise<void> {
   return new Promise((resolve) => {
     setTimeout(() => {
       syncSetCount(count);
+      messagesRef.push(count);
       resolve();
     }, 1000);
   });
 }
 
-export function syncGetCount(): number {
+export function syncGetCount(): Object {
   return LS.load('count');
 }
 

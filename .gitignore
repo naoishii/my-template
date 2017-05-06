@@ -1,5 +1,8 @@
 build/
 
+# Secret
+src/env/
+
 # Dependency directories
 node_modules/
 
