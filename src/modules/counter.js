@@ -7,6 +7,7 @@ const RESET = 'Counter/RESET';
 
 const initialState = {
   count: 0,
+  lastUpdate: 0,
 };
 
 export default function reducer(state: CounterState = initialState, action: CounterAction = {}) {
@@ -14,11 +15,13 @@ export default function reducer(state: CounterState = initialState, action: Coun
     case INCREMENT:
       return Object.assign({}, state, {
         count: state.count + 1,
+        lastUpdate: Date.now(),
       });
 
     case DECREMENT:
       return Object.assign({}, state, {
         count: state.count - 1,
+        lastUpdate: Date.now(),
       });
 
     case RESET:

@@ -2,6 +2,7 @@ import type { Action } from './action';
 
 export interface CounterState {
   count: number;
+  lastUpdate: Date;
 }
 
 export interface CounterAction extends Action {}

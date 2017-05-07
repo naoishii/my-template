@@ -12,16 +12,12 @@ import {
 import store from './store';
 // import Hoge from './Hoge';
 import Counter from './containers/Counter';
+import Summary from './containers/Summary';
 
 // tmp
 const Home = () => (
   <div>
     home
-  </div>
-);
-const Summary = () => (
-  <div>
-    summary
   </div>
 );
 
