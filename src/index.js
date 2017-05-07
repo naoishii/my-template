@@ -3,10 +3,45 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { AppContainer } from 'react-hot-loader';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+} from 'react-router-dom';
 
 import store from './store';
 // import Hoge from './Hoge';
-import Hoge from './containers/Counter';
+import Counter from './containers/Counter';
+
+// tmp
+const Home = () => (
+  <div>
+    home
+  </div>
+);
+const Summary = () => (
+  <div>
+    summary
+  </div>
+);
+
+const Routes = () => (
+  <Router>
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/counter">Counter</Link></li>
+        <li><Link to="/summary">Summary</Link></li>
+      </ul>
+
+      <hr />
+
+      <Route exact path="/" component={Home} />
+      <Route path="/counter" component={Counter} />
+      <Route path="/summary" component={Summary} />
+    </div>
+  </Router>
+);
 
 const render = (Component) => {
   ReactDOM.render(
@@ -19,11 +54,11 @@ const render = (Component) => {
   );
 };
 
-render(Hoge);
+render(Routes);
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./Hoge', () => {
-    render(Hoge);
+  module.hot.accept('./containers/Coutner', () => {
+    render(Counter);
   });
 }
