@@ -15,6 +15,7 @@ import {
 
 import store from './src/store';
 import Counter from './src/native/containers/Counter';
+import Summary from './src/native/containers/Summary';
 
 export default class native extends Component {
   render() {
@@ -22,6 +23,7 @@ export default class native extends Component {
       <Provider store={store}>
         <View style={styles.container}>
           <Counter />
+          <Summary />
         </View>
       </Provider >
     );

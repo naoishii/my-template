@@ -1,19 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-
-// 冗長
-function Button(props) {
-  return (
-    <button onClick={props.action}>
-      {props.children}
-    </button>
-  );
-}
+import { Button, View, Text } from 'react-native';
 
 function CountLine(props) {
   return (
-    <div>
+    <Text>
       {props.count}
-    </div>
+    </Text>
   );
 }
 
@@ -24,14 +16,15 @@ export default class Summary extends Component {
 
   render() {
     return (
-      <div>
-        <Button action={this.props.actions.fetchData} >
-          fetch
-        </Button>
+      <View>
+        <Button
+          onPress={this.props.actions.fetchData}
+          title="fetch"
+        />
         {
           this.props.history.map(props => <CountLine count={props.count} />)
         }
-      </div>
+      </View>
     );
   }
 }

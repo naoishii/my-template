@@ -14,18 +14,15 @@ export default class Counter extends Component {
         <Button
           onPress={this.props.actions.increment}
           title="increment"
-        >
-        </Button>
+        />
         <Button
           onPress={this.props.actions.decrement}
           title="decrement"
-        >
-        </Button>
+        />
         <Button
           onPress={this.props.actions.reset}
           title="zero"
-        >
-        </Button>
+        />
       </View>
     );
   }

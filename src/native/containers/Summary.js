@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as actions from '../modules/summary';
+import * as actions from '../../modules/summary';
 import Component from '../components/Summary';
 
 const mapStateToProps = ({ summary }) => summary;
