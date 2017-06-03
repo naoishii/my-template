@@ -11,8 +11,8 @@ import {
 
 import store from './store';
 // import Hoge from './Hoge';
-import Counter from './containers/Counter';
-import Summary from './containers/Summary';
+import Counter from './web/containers/Counter';
+import Summary from './web/containers/Summary';
 
 // tmp
 const Home = () => (

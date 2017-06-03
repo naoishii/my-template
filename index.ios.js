@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import {
   AppRegistry,
   StyleSheet,
@@ -13,8 +13,8 @@ import {
   View
 } from 'react-native';
 
-import store from './src/store'; 
-import Counter from './src/containers/Counter'; 
+import store from './src/store';
+import Counter from './src/native/containers/Counter';
 
 export default class native extends Component {
   render() {
