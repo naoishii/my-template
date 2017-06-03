@@ -1,17 +1,6 @@
-build/
-
-# Secret
+# my own settings
 src/env/
-native/src/env/
 
-# coverage
-coverage/
-
-*.swp
-*.swo
-*.tmp
-
-# native
 # OSX
 #
 .DS_Store

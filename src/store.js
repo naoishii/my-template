@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import reducer from './modules';
+import reducers from './modules';
 import asyncStorage from './middleware/asyncStorage';
 
 let middleware = [thunkMiddleware, asyncStorage];
@@ -11,7 +11,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const store = createStore(
-  reducer,
+  reducers,
   applyMiddleware(...middleware),
 );
 
