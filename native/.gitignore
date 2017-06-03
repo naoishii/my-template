@@ -1,22 +1,5 @@
-build/
-
-# Secret
-src/env/
-native/src/env/
-
-# Dependency directories
-node_modules/
-
-# coverage
-coverage/
-
-*.swp
-*.swo
-*.tmp
-
-# native
 # my own settings
-native/src/env/
+src/env/
 
 # OSX
 #
@@ -24,7 +7,7 @@ native/src/env/
 
 # Xcode
 #
-native/build/
+build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -44,7 +27,7 @@ project.xcworkspace
 
 # Android/IntelliJ
 #
-native/build/
+build/
 .idea
 .gradle
 local.properties
@@ -52,12 +35,12 @@ local.properties
 
 # node.js
 #
-native/node_modules/
-native/npm-debug.log
-native/yarn-error.log
+node_modules/
+npm-debug.log
+yarn-error.log
 
 # BUCK
-native/buck-out/
+buck-out/
 \.buckd/
 *.keystore
 
@@ -68,6 +51,6 @@ native/buck-out/
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
 
-native/fastlane/report.xml
-native/fastlane/Preview.html
-native/fastlane/screenshots
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
