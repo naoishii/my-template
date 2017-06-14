@@ -9,22 +9,17 @@ import { Provider } from 'react-redux';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View
 } from 'react-native';
 
 import store from './src/store';
-import Counter from './src/native/containers/Counter';
-import Summary from './src/native/containers/Summary';
+
+import Navigator from './src/native/containers/Navigator';
 
 export default class native extends Component {
   render() {
     return (
       <Provider store={store}>
-        <View style={styles.container}>
-          <Counter />
-          <Summary />
-        </View>
+        <Navigator />
       </Provider >
     );
   }

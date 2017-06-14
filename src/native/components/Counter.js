@@ -8,8 +8,13 @@ export default class Counter extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <View>
+        <Text>count: { this.props.count }</Text>
+        <Text>count: { this.props.count }</Text>
+        <Text>count: { this.props.count }</Text>
+        <Text>count: { this.props.count }</Text>
         <Text>count: { this.props.count }</Text>
         <Button
           onPress={this.props.actions.increment}
